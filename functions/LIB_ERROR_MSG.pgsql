@@ -12,12 +12,12 @@ DECLARE
 
 BEGIN
 
-    RETURN '{>dbError>:{'       || 
+    RETURN 'dbError>'       || 
             '>sistema>:>'       || VPSISTEMA               || '>,' ||
             '>procedimiento>:>' || VPPROCEDURE             || '>,' ||
             '>version>:>'       || VPVERSION               || '>,' ||
             '>proceso>:>'       || VPPROCESO               || '>,' ||
-            '>error>:>'         || REPLACE(VPERROR,'"','') || '>}}';
+            '>error>:>'         || REPLACE(VPERROR,'"','') || '>';
 
 END
 $$ LANGUAGE plpgsql;
